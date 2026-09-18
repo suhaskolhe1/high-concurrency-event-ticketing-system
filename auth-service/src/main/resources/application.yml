@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: root
+    password: rootpassword
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: auth
+
+  flyway:
+    enabled: true
+    schemas: auth
+    create-schemas: true
+    baseline-on-migrate: true
+
+jwt:
+  # This should be a long, random 256-bit string in production!
+  secret: "EventBookingSuperSecretKeyThatIsVeryLongAndSecure12345!"
+  expiration: 86400000 # 1 day in milliseconds
