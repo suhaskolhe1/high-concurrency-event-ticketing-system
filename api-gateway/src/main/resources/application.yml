@@ -13,4 +13,4 @@ spring:
           predicates:
             - Path=/api/auth/**
 jwt:
-  secret: "EventBookingSuperSecretKeyThatIsVeryLongAndSecure12345!"
+  secret: "ThisIsMySuperSecretKeyForEventBookingThatIsLongEnough"

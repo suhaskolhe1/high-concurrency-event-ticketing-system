@@ -26,5 +26,5 @@ spring:
 
 jwt:
   # This should be a long, random 256-bit string in production!
-  secret: "EventBookingSuperSecretKeyThatIsVeryLongAndSecure12345!"
+  secret: "ThisIsMySuperSecretKeyForEventBookingThatIsLongEnough"
   expiration: 86400000 # 1 day in milliseconds
