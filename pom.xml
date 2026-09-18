@@ -19,6 +19,7 @@
         <module>api-gateway</module>
         <module>event-service</module>
         <module>inventory-service</module>
+        <module>booking-service</module>
     </modules>
 
     <parent>

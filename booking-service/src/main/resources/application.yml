@@ -1,0 +1,35 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: booking-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: root
+    password: rootpassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: bookings
+  flyway:
+    enabled: true
+    schemas: bookings
+    create-schemas: true
+    baseline-on-migrate: true
+  kafka:
+    bootstrap-servers: localhost:9092 # Connect to KRaft Kafka broker
+    producer:
+      # We send objects as JSON over Kafka
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: booking-group
+      # We receive objects as JSON from Kafka
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "org.suhas.common.event"
