@@ -18,6 +18,7 @@
         <module>auth-service</module>
         <module>api-gateway</module>
         <module>event-service</module>
+        <module>inventory-service</module>
     </modules>
 
     <parent>
