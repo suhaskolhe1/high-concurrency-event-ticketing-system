@@ -17,6 +17,7 @@
         <module>common</module>
         <module>auth-service</module>
         <module>api-gateway</module>
+        <module>event-service</module>
     </modules>
 
     <parent>

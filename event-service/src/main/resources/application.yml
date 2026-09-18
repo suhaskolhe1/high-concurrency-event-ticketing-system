@@ -1,0 +1,31 @@
+server:
+  port: 8082 # Event Service runs on 8082
+
+spring:
+  application:
+    name: event-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: root
+    password: rootpassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: events # Isolates this service's data into its own schema!
+
+  flyway:
+    enabled: true
+    schemas: events
+    create-schemas: true
+    baseline-on-migrate: true
+
+  # Connect to the Redis container we defined in docker-compose
+  data:
+    redis:
+      host: localhost
+      port: 6379
