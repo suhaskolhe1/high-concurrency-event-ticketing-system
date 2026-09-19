@@ -4,4 +4,4 @@ CREATE TABLE transactions (
                               amount DECIMAL(10,2) NOT NULL,
                               status VARCHAR(20) NOT NULL,
                               created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);``
+);
