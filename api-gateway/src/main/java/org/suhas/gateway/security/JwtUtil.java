@@ -11,7 +11,7 @@ import java.security.Key;
 @Component
 public class JwtUtil {
 
-    @Value("$jwt.secret")
+    @Value("${jwt.secret}")
     private String secret;
 
     private Key getSigningKey() {
