@@ -1,5 +1,11 @@
 # EventBooking: High-Concurrency Ticketing Platform
 
+![Java](https://img.shields.io/badge/Java-17-orange.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen.svg)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-KRaft-black.svg)
+![Redis](https://img.shields.io/badge/Redis-Distributed_Locking-red.svg)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Schema_Isolation-blue.svg)
+
 A distributed microservices architecture designed to handle massive traffic spikes and concurrent booking requests without data anomalies. 
 
 This project was built to tackle the classic "double-booking" problem in e-commerce and ticketing systems. It implements an event-driven architecture using Apache Kafka and relies on distributed caching and locking to guarantee data integrity at scale.
